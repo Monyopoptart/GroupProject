@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 0da0159c14f0f414ba078b49a3b03c00
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4722344367162387593
+    second: hero swing 325_0
+  - first:
+      213: 607781105237521440
+    second: hero swing 325_1
+  - first:
+      213: 4744574984905257624
+    second: hero swing 325_2
+  - first:
+      213: -2057395511677307423
+    second: hero swing 325_3
+  - first:
+      213: -3127085891928129795
+    second: hero swing 325_4
+  - first:
+      213: -66014864513323043
+    second: hero swing 325_5
+  - first:
+      213: 1605025204315519107
+    second: hero swing 325_6
+  - first:
+      213: 6012422432527815979
+    second: hero swing 325_7
+  - first:
+      213: 4170610603273921057
+    second: hero swing 325_8
+  - first:
+      213: -4837046921587589242
+    second: hero swing 325_9
+  - first:
+      213: 5691362828808523110
+    second: hero swing 325_10
+  - first:
+      213: 9105743769191775278
+    second: hero swing 325_11
+  - first:
+      213: -8518939357404753294
+    second: hero swing 325_12
+  - first:
+      213: -8239824279730185481
+    second: hero swing 325_13
+  - first:
+      213: -928831860073306089
+    second: hero swing 325_14
+  - first:
+      213: 4194645945892806429
+    second: hero swing 325_15
+  - first:
+      213: -5585130007181456439
+    second: hero swing 325_16
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +91,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +121,378 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hero swing 325_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9c6497b05a92547895b3489e76f886
+      internalID: -4722344367162387593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde2e6fe6da10744fa8a78df7d86a89a
+      internalID: 607781105237521440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1904dd2e5569404faa905021949995f
+      internalID: 4744574984905257624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_3
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2213499962499c4a8dc7e5401e73134
+      internalID: -2057395511677307423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e4a59b8ec28424c920292942d8b38a
+      internalID: -3127085891928129795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd39f90f42d5814d86fb5aa93b62f5f
+      internalID: -66014864513323043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_6
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f9d8ca9e69dd94ca5e085b6d14b520
+      internalID: 1605025204315519107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_7
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe603a2d1e7f98f44a3b58ff2a0cd30d
+      internalID: 6012422432527815979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cee3f523ae8517459f5a47cd4217ed1
+      internalID: 4170610603273921057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_9
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0689e7eb97345184bbde149a4d9b7f2a
+      internalID: -4837046921587589242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_10
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df083c54a851e347912c57e6c73f928
+      internalID: 5691362828808523110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_11
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3522fd863ab130344a91bbf8b1ad32b0
+      internalID: 9105743769191775278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937c784b8d0993840aeb7870d7319dc2
+      internalID: -8518939357404753294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4accc42c1f3cddb489831d114141a958
+      internalID: -8239824279730185481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_14
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4554d9eb0028647ad0891a8295ea75
+      internalID: -928831860073306089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_15
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26b0aad3c57cd34f806fb2a133ffcd2
+      internalID: 4194645945892806429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero swing 325_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6da915a4dc57a04cbb94d784c264fe6
+      internalID: -5585130007181456439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

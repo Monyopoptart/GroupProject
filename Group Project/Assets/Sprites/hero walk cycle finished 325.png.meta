@@ -1,7 +1,85 @@
 fileFormatVersion: 2
 guid: fab97e2611802f04ebff0db52b218930
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 39764845832817679
+    second: hero walk cycle finished 325_0
+  - first:
+      213: -6760722909279549799
+    second: hero walk cycle finished 325_1
+  - first:
+      213: 9104554040335026269
+    second: hero walk cycle finished 325_2
+  - first:
+      213: -8811807443683011749
+    second: hero walk cycle finished 325_3
+  - first:
+      213: -6310692420841067651
+    second: hero walk cycle finished 325_4
+  - first:
+      213: -1846724974550376914
+    second: hero walk cycle finished 325_5
+  - first:
+      213: -6326428356033713620
+    second: hero walk cycle finished 325_6
+  - first:
+      213: 6858399794343205730
+    second: hero walk cycle finished 325_7
+  - first:
+      213: 8281872459462228324
+    second: hero walk cycle finished 325_8
+  - first:
+      213: -6311774678328812340
+    second: hero walk cycle finished 325_9
+  - first:
+      213: 6265832929821672516
+    second: hero walk cycle finished 325_10
+  - first:
+      213: -8645325943140682502
+    second: hero walk cycle finished 325_11
+  - first:
+      213: 1459210186449463964
+    second: hero walk cycle finished 325_12
+  - first:
+      213: 3085361592134816657
+    second: hero walk cycle finished 325_13
+  - first:
+      213: 1778858170956680867
+    second: hero walk cycle finished 325_14
+  - first:
+      213: -5851337615600160193
+    second: hero walk cycle finished 325_15
+  - first:
+      213: -5304707903761558526
+    second: hero walk cycle finished 325_16
+  - first:
+      213: 7323924072773233097
+    second: hero walk cycle finished 325_17
+  - first:
+      213: -1746543922352511796
+    second: hero walk cycle finished 325_18
+  - first:
+      213: -3136093167477800185
+    second: hero walk cycle finished 325_19
+  - first:
+      213: 4291504709111571851
+    second: hero walk cycle finished 325_20
+  - first:
+      213: -133205776685856466
+    second: hero walk cycle finished 325_21
+  - first:
+      213: -850315145665026041
+    second: hero walk cycle finished 325_22
+  - first:
+      213: -5811032150807405719
+    second: hero walk cycle finished 325_23
+  - first:
+      213: -4385191357047050590
+    second: hero walk cycle finished 325_24
+  - first:
+      213: 1598334182024369713
+    second: hero walk cycle finished 325_25
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +118,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +148,567 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1625
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef27b0f0dab9624d9a181dcf5ebe3d0
+      internalID: 39764845832817679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1625
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf48043de39e97a4e8a7fde78203fb84
+      internalID: -6760722909279549799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1625
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde38fd01337c014b916415ba8776701
+      internalID: 9104554040335026269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_3
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1625
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36161f445e667e4e88be6c720b85844
+      internalID: -8811807443683011749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_4
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1625
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea95dccad3b3b84fa4fc2b787063dd3
+      internalID: -6310692420841067651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181907cf399a82e4b80cd211d3142de7
+      internalID: -1846724974550376914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_6
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dc6bb4d223c164cbe1344080faaa00
+      internalID: -6326428356033713620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_7
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bc529532f124e40b4aea01ee714e53
+      internalID: 6858399794343205730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_8
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e6be78d86154848bfe90c4351909f2
+      internalID: 8281872459462228324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_9
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1300
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c731493f3da23448aed29d1c3da2f7f
+      internalID: -6311774678328812340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76e1c1ef545eba4b8cd7a0a8829961c
+      internalID: 6265832929821672516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_11
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a905b879cb2b6a4daff5445bdef8c2e
+      internalID: -8645325943140682502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_12
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07380bf60344ebc48b135e858fbfe901
+      internalID: 1459210186449463964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_13
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d19c9a8fdd21a740b642709e088f198
+      internalID: 3085361592134816657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_14
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 975
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4423b0a5894aba14595983605b02396a
+      internalID: 1778858170956680867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee60f0441c106b14fa78a78224929582
+      internalID: -5851337615600160193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_16
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfe5f30f15c3a34c90fd7f65f6537f6
+      internalID: -5304707903761558526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_17
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64e13cef197d9f43b7823e0b45d8714
+      internalID: 7323924072773233097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_18
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b67443e28ad9224085e3e642fa430a8
+      internalID: -1746543922352511796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_19
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 650
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b88361191fdf64469d42b3dd8ac3c62
+      internalID: -3136093167477800185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0854b9ce77cc546a6bec4a95b92b18
+      internalID: 4291504709111571851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1bc0a7cce10b943bdfab1ce7924c6d
+      internalID: -133205776685856466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_22
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e8b711003222941ab21f65dcbbdbbf
+      internalID: -850315145665026041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_23
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43be2ebf86a541a47bdce260fb579bee
+      internalID: -5811032150807405719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_24
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 325
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e34003bcccbce46947d3e169ea4b24
+      internalID: -4385191357047050590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero walk cycle finished 325_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 325
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e142b70915aa17c459340e53b9c0ab72
+      internalID: 1598334182024369713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
