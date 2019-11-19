@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  playerHealthSlider: {fileID: 0}
+  UICanvas: {fileID: 0}

@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 7612628903940553567}
   - component: {fileID: 7612628903940553566}
   - component: {fileID: 7612628903940553537}
+  - component: {fileID: 7661506234141537048}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -392,6 +393,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7661506234141537048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612628903940553536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8acb0f1aa40434197fdaed3a80802d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 7612628904294068986}
+  - {fileID: 6032420639889297882}
+  - {fileID: 6448902832135128584}
+  - {fileID: 405577071730933792}
+  - {fileID: 8991001353749701000}
+  scoreText: {fileID: 7612628904247774608}
 --- !u!1 &7612628904247774613
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,8 +447,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 470, y: 225}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 4, y: 225}
+  m_SizeDelta: {x: 1091.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7612628904247774609
 CanvasRenderer:
@@ -465,7 +485,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
