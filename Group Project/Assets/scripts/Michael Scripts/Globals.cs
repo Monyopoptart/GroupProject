@@ -9,7 +9,7 @@ public class Globals : MonoBehaviour
     private static float playerHealth; //Private because it will need to be changed by public function changePlayerHealth(float change);
     private float maxHealth;
     public GameObject Player; //Insert player prefab here so that we can access public functions.
-    public Slider playerHealthSlider; //Players health will appear with this slider
+    //public Slider playerHealthSlider; //Players health will appear with this slider
     // Start is called before the first frame update
 
     void Start()
@@ -23,10 +23,12 @@ public class Globals : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerHealthSlider.value = playerHealth / maxHealth; //Changes the slider health. We will move this out of Update() once we have more of our game finished.
+        //playerHealthSlider.value = playerHealth / maxHealth; //Changes the slider health. We will move this out of Update() once we have more of our game finished.
+        // I made some hearts and animated them. I think it will be more visually appealing than a slider if you guys are okay with using them. -Phillip
         if (returnHealth() < 0 || returnHealth() == 0)
         {
-            Quit();
+            //Quit();
+            // We'll need this to boot the player to a lose screen. I can get win and lose screens done in the next 2 weeks -Phillip
         }
     }
 
