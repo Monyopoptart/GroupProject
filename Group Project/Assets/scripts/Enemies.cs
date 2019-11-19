@@ -40,10 +40,10 @@ public class Enemies : MonoBehaviour
             scoreComponent.ChangeScore(1);
             Destroy(gameObject);
         }
-        else if (collision.gameObject.GetComponent<PlayerControls>() != null)
-        {
-            collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(-10);
-        }
+        //else if (collision.gameObject.GetComponent<PlayerControls>() != null)
+        //{
+        //    collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(-10);
+        //}
     }
 
 }

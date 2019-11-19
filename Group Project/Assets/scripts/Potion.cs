@@ -22,7 +22,7 @@ public class Potion : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerControls>() != null)
         {
-            collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(+50);
+            Globals.changePlayerHealthStatic(50);
             Destroy(gameObject);
         }
 

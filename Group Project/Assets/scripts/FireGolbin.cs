@@ -44,9 +44,9 @@ public class FireGolbin : MonoBehaviour
             Destroy(gameObject);
             }
         }
-        else if (collision.gameObject.GetComponent<PlayerControls>() != null)
-        {
-            collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(-25);
-        }
+        //else if (collision.gameObject.GetComponent<PlayerControls>() != null)
+        //{
+        //    collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(-25);
+        //}
     }
 }
