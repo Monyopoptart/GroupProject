@@ -4,25 +4,26 @@ using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
 {
-    public Slider healthBar;
+    //public Slider healthBar; By changing health to global, we no longer need this
     public float speed = 5;
+    public Globals global;
     Transform playerFeet;
+    Transform sword = null;
 	Rigidbody2D rb;
     bool canJump = false;
-    public int health = 100;
+    //public int health = 100; By changing health to global, we no longer need this
     Vector3 startPoint;
     Animator anim;
     SpriteRenderer sr;
-    Transform sword = null;
 
     void Start ()
     {
         anim = GetComponent<Animator>();
         startPoint = transform.position;
 		rb = GetComponent<Rigidbody2D>();
-        playerFeet = transform.GetChild(0);
+        playerFeet = gameObject.transform.GetChild(0);
         sr = GetComponent<SpriteRenderer>();
-        sword = transform.GetChild(1);
+        //sword = transform.GetChild(1); save for later. Hit box soon
     }
 
     public void Respawn()
@@ -35,15 +36,15 @@ public class PlayerControls : MonoBehaviour
         sword.gameObject.SetActive(true);
     }
 
-    public void ChangeHealth(int change)
-    {
-        health += change;
-        healthBar.value = health / 100.0f;
-        if (health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
+    //public void ChangeHealth(int change)
+    //{
+    //    health += change;
+    //    healthBar.value = health / 100.0f;
+    //    if (health <= 0)
+    //    {
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //    }
+    //}
 
     void Update()//More responsive - checks our input each frame
     {
@@ -79,12 +80,13 @@ public class PlayerControls : MonoBehaviour
             anim.SetBool("is Walking", false);
 
         float jumpValue = Input.GetAxis("Jump");
-            canJump = false;
+        canJump = false;
         if (jumpValue > 0)
         {
             //trying to jump here
-            Collider2D[] collisions 
-                = Physics2D.OverlapCircleAll(playerFeet.position, .25f);
+            playerFeet = gameObject.transform.GetChild(0);
+
+            Collider2D[] collisions = Physics2D.OverlapCircleAll(playerFeet.position, .5f);
 
             //Ray casting
             //means 'cast' or draw a ray out in one direction and check
@@ -95,11 +97,13 @@ public class PlayerControls : MonoBehaviour
             {
                 if (collisions[i].gameObject != gameObject)
                 {
+                    Debug.Log("Can jump is true");
                     canJump = true;
                     break;
                 }
             }
         }
+             
     }
 	
 	void FixedUpdate()//Synced with physics, do movement here, input in Update
@@ -113,6 +117,12 @@ public class PlayerControls : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Debug.Log("Collision Occurred");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            global.changePlayerHealth(-10);
+            //Globals.changePlayerHealthStatic(-10); //For now, any collisions with enemy causes damage
+            Debug.Log("Enemy touched you");
+        }
     }
 }
