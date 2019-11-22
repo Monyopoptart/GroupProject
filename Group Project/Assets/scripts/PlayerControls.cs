@@ -6,21 +6,22 @@ public class PlayerControls : MonoBehaviour
 {
     //public Slider healthBar; By changing health to global, we no longer need this
     public float speed = 5;
-    //Transform playerFeet; Save this for later, we will add jump mechanic soon
+    public Globals global;
+    Transform playerFeet;
+    Transform sword = null;
 	Rigidbody2D rb;
     bool canJump = false;
     //public int health = 100; By changing health to global, we no longer need this
     Vector3 startPoint;
     Animator anim;
     SpriteRenderer sr;
-    Transform sword = null;
 
     void Start ()
     {
         anim = GetComponent<Animator>();
         startPoint = transform.position;
 		rb = GetComponent<Rigidbody2D>();
-       // playerFeet = transform.GetChild(0); //Save this for later. we will add jump machanic soon
+        playerFeet = gameObject.transform.GetChild(0);
         sr = GetComponent<SpriteRenderer>();
         //sword = transform.GetChild(1); save for later. Hit box soon
     }
@@ -78,14 +79,14 @@ public class PlayerControls : MonoBehaviour
         else
             anim.SetBool("is Walking", false);
 
-            /* Save this section for later. We will add jump mechanic soon
         float jumpValue = Input.GetAxis("Jump");
-            canJump = false;
+        canJump = false;
         if (jumpValue > 0)
         {
             //trying to jump here
-            Collider2D[] collisions 
-                = Physics2D.OverlapCircleAll(playerFeet.position, .25f);
+            playerFeet = gameObject.transform.GetChild(0);
+
+            Collider2D[] collisions = Physics2D.OverlapCircleAll(playerFeet.position, .5f);
 
             //Ray casting
             //means 'cast' or draw a ray out in one direction and check
@@ -96,12 +97,13 @@ public class PlayerControls : MonoBehaviour
             {
                 if (collisions[i].gameObject != gameObject)
                 {
+                    Debug.Log("Can jump is true");
                     canJump = true;
                     break;
                 }
             }
         }
-             */
+             
     }
 	
 	void FixedUpdate()//Synced with physics, do movement here, input in Update
@@ -118,7 +120,8 @@ public class PlayerControls : MonoBehaviour
         Debug.Log("Collision Occurred");
         if (collision.gameObject.tag == "Enemy")
         {
-            Globals.changePlayerHealthStatic(-10); //For now, any collisions with enemy causes damage
+            global.changePlayerHealth(-10);
+            //Globals.changePlayerHealthStatic(-10); //For now, any collisions with enemy causes damage
             Debug.Log("Enemy touched you");
         }
     }

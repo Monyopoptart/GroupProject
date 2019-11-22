@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cf0cb33109a684c99e626ee4518ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Firecracker: {fileID: 0}
+  Firecracker: {fileID: 8300000, guid: 53dffc86c213e06409484e50c2b674fc, type: 3}
   SwordPrefab: {fileID: 0}
 --- !u!50 &1120397342
 Rigidbody2D:
