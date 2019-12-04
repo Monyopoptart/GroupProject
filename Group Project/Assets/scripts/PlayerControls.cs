@@ -22,7 +22,6 @@ public class PlayerControls : MonoBehaviour
         startPoint = transform.position;
 		rb = GetComponent<Rigidbody2D>();
         playerFeet = gameObject.transform.GetChild(0);
-        
         sr = GetComponent<SpriteRenderer>();
         //sword = transform.GetChild(1); save for later. Hit box soon
     }
@@ -104,24 +103,10 @@ public class PlayerControls : MonoBehaviour
                 }
             }
         }
-        /*
-        #region Attacking
-        float attackValue = Input.GetAxis("Fire1");
-        if (attackValue > 0)
-        {
-            anim.SetBool("isattacking", true);
-        }
-        else
-        {
-            anim.SetBool("isattacking", false);
-        }
-
-
-        #endregion
-        */
+             
     }
-
-    void FixedUpdate()//Synced with physics, do movement here, input in Update
+	
+	void FixedUpdate()//Synced with physics, do movement here, input in Update
     {
         if (canJump)
         {
@@ -132,7 +117,7 @@ public class PlayerControls : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Collision Occurred");
+        Debug.Log("Collision Occurred");
         if (collision.gameObject.tag == "Enemy")
         {
             global.changePlayerHealth(-10);
@@ -140,5 +125,4 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("Enemy touched you");
         }
     }
-
 }

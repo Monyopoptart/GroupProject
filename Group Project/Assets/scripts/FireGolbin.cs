@@ -33,26 +33,15 @@ public class FireGolbin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         //if(collision.gameObject.tag == "laser")
         if (collision.gameObject.GetComponent<Sword>() != null)
         {
-            Debug.Log(firehealth);
-            firehealth -= 25;
+            firehealth = firehealth - 25;
             if(firehealth == 0)
             {
-            //scoreComponent.ChangeScore(1);
+            scoreComponent.ChangeScore(1);
             Destroy(gameObject);
-            }
-        }
-        if (collision.gameObject.tag == "Sword")
-        {
-            Debug.Log(firehealth);
-            firehealth -= 25;
-            if (firehealth == 0)
-            {
-                //scoreComponent.ChangeScore(1);
-                Destroy(gameObject);
             }
         }
         //else if (collision.gameObject.GetComponent<PlayerControls>() != null)
