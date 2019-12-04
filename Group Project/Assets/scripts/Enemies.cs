@@ -37,8 +37,15 @@ public class Enemies : MonoBehaviour
         {
             
             Debug.Log("Test2");
-            scoreComponent.ChangeScore(1);
+            //scoreComponent.ChangeScore(1);
             Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Sword")
+        {
+            Debug.Log("Sword Collided");
+            //scoreComponent.ChangeScore(1);
+            Destroy(gameObject);
+            
         }
         //else if (collision.gameObject.GetComponent<PlayerControls>() != null)
         //{
