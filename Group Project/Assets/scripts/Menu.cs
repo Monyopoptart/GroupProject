@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
     }
     void PlayOnClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
     void QuitOnClick()
     {
