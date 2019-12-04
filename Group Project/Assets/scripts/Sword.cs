@@ -18,9 +18,10 @@ public class Sword : MonoBehaviour
 
     void Update()
     {
+        float attackValue = Input.GetAxis("Fire1");
         //ive tried making it a trigger and it still did not work 
         //Ive moved the colltion box so that it doesn't overlap the player box
-        if (Input.GetKey(KeyCode.E))
+        if (attackValue > 0)
         {
             col.enabled = true;
             //Instantiate(SwordPrefab, transform.position, transform.rotation);
