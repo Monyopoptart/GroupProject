@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class GS : MonoBehaviour
+
+  
+
 {
     public float speed = 10;
     public float lifeTime = 3;
@@ -18,31 +21,33 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (prefabToSpawn != null)
+        {
+                StartCoroutine(Spawn());
+            
 
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (prefabToSpawn!=null)
+        if (prefabToSpawn != null)
         {
-            if(col.gameObject.tag == Player)
+            if (col.gameObject.tag == "Player")
+            {
+                StartCoroutine(Spawn());
+            }
 
         }
     }
 
 
-    public void Spawn()
-    {
-        GameObject spawnedObject = Instantiate(prefabToSpawn,
-            transform.position, transform.rotation);
-        spawnedObject.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * 50);
-        Invoke("Spawn", spawnDelay);
-    }
     IEnumerator Spawn()
     {
+        yield return new WaitForSeconds(1f);
         GameObject spawnedObject = Instantiate(prefabToSpawn,
             transform.position, transform.rotation);
-        spawnedObject.GetComponent<Rigidbody2D>().AddForce(x.insideUnitCircle * 50);
+        //spawnedObject.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * 50);
 
     }
 }
