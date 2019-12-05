@@ -39,7 +39,7 @@ public class GrapplingHook : MonoBehaviour
             if(readyToFire)
             {
                 readyToFire = false;
-                grapplingCol.enabled = true;
+                //grapplingCol.enabled = true;
                 grapplingRB.AddForce(gameObject.transform.forward * grappleForce);
             }
         }
@@ -51,5 +51,9 @@ public class GrapplingHook : MonoBehaviour
         mousePos.y -= objPos.y;
         mouseAngle = Mathf.Atan2(mousePos.y, mousePos.x);
         Debug.Log("mouseAngleAngle = " + mouseAngle);
+
+        // Rotating GrappleArm to follow mouse
+        Quaternion targetRotation = Quaternion.AngleAxis(Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5.0f * Time.deltaTime);
     }
 }
