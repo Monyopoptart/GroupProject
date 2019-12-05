@@ -2,9 +2,10 @@
 
 public class GrapplingHook : MonoBehaviour
 {
-    public float grappleForce = 1000.0f;
-    public float pullForce = 1000.0f;
+    public float grappleForce = 750.0f;
+    public float pullForce = 750.0f;
     public float maxPullTime = 2.0f;
+    public float maxPullVelocity = 40.0f;
     public float ropeWidth = 0.05f;
     bool readyToFire = false, firing = false, pulling = false;
     float mouseAngle;
@@ -80,7 +81,10 @@ public class GrapplingHook : MonoBehaviour
             direction.x -= transform.position.x;
             direction.y -= transform.position.y;
             direction.Normalize();
-            playerRB.AddForce(direction * pullForce);
+            if(playerRB.velocity.magnitude < maxPullVelocity)
+            {
+                playerRB.AddForce(direction * pullForce);
+            }
         }
 
         // Drawing line to grappling hook

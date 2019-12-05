@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d231b2e3108244381d4c172844280e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxThrowTime: 2
 --- !u!50 &1391766983
 Rigidbody2D:
   serializedVersion: 4
@@ -364,9 +365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c31a43367f0184f95b0898b3fad41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grappleForce: 1000
-  pullForce: 1000
+  grappleForce: 750
+  pullForce: 750
   maxPullTime: 2
+  maxPullVelocity: 40
   ropeWidth: 0.05
 --- !u!120 &1391766988
 LineRenderer:
