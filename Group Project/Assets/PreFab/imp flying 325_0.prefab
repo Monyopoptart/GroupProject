@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 467236312956882500}
   - component: {fileID: 4616144969824105678}
   - component: {fileID: 1519941288038069460}
+  - component: {fileID: -1540470372201196296}
   m_Layer: 0
   m_Name: imp flying 325_0
   m_TagString: Enemy
@@ -140,3 +141,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0.15941119, y: 0.123986125}
   m_Size: {x: 1.301641, y: 1.9392831}
   m_Direction: 0
+--- !u!114 &-1540470372201196296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467236312956882507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b40b6144ae46b4429436c2adcb1b75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 3
