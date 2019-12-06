@@ -24,7 +24,7 @@ public class PlayerControls : MonoBehaviour
         playerFeet = gameObject.transform.GetChild(0);
         
         sr = GetComponent<SpriteRenderer>();
-        //sword = transform.GetChild(1); save for later. Hit box soon
+        sword = transform.GetChild(2); //save for later. Hit box soon
     }
 
     public void Respawn()
@@ -75,6 +75,7 @@ public class PlayerControls : MonoBehaviour
                 //}
             }
             rb.velocity = new Vector2(movementX * speed, rb.velocity.y);
+            sword.transform.position = Vector3.MoveTowards(gameObject.transform.position, sword.transform.position, 0);
             anim.SetBool("is Walking", true);
         }
         else
@@ -85,7 +86,7 @@ public class PlayerControls : MonoBehaviour
         if (jumpValue > 0)
         {
             //trying to jump here
-            playerFeet = gameObject.transform.GetChild(0);
+            playerFeet = gameObject.transform.GetChild(1);
 
             Collider2D[] collisions = Physics2D.OverlapCircleAll(playerFeet.position, .5f);
 
@@ -104,21 +105,23 @@ public class PlayerControls : MonoBehaviour
                 }
             }
         }
-        /*
+        
         #region Attacking
         float attackValue = Input.GetAxis("Fire1");
         if (attackValue > 0)
         {
+            sword.GetComponent<BoxCollider2D>().enabled=true;
             anim.SetBool("isattacking", true);
         }
         else
         {
+            sword.GetComponent<BoxCollider2D>().enabled = false;
             anim.SetBool("isattacking", false);
         }
 
 
         #endregion
-        */
+        
     }
 
     void FixedUpdate()//Synced with physics, do movement here, input in Update

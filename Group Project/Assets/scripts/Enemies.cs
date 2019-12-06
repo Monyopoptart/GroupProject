@@ -47,6 +47,13 @@ public class Enemies : MonoBehaviour
             Destroy(gameObject);
             
         }
+        if (collision.gameObject.tag == "Hook")
+        {
+            Debug.Log("Hook Collided");
+            //scoreComponent.ChangeScore(1);
+            Destroy(gameObject);
+
+        }
         //else if (collision.gameObject.GetComponent<PlayerControls>() != null)
         //{
         //    collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(-10);
