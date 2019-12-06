@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7292653163004731393}
   - component: {fileID: 7292653163004731398}
   - component: {fileID: 6948725788136183903}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: lazer finshed 325_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
