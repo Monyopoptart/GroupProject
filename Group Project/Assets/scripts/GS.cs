@@ -15,19 +15,19 @@ public class GS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawn();
+        SpawnObject();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (prefabToSpawn != null)
-        {
-                StartCoroutine(Spawn());
-            
-
-        }
+        //if (prefabToSpawn != null)
+        //{
+        //        StartCoroutine(Spawn());
+        //    
+        //
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -46,9 +46,16 @@ public class GS : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(1f);
-        GameObject spawnedObject = Instantiate(prefabToSpawn,
-            transform.position, transform.rotation);
-        //spawnedObject.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * 50);
+        GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
 
+        //SpawnObject();
+        //spawnedObject.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * 50);
+        //Spawn();
+
+    }
+    public void SpawnObject()
+    {
+        StartCoroutine(Spawn());
+        Invoke("SpawnObject", spawnDelay);
     }
 }

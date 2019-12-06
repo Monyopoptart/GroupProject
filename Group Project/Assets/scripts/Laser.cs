@@ -28,7 +28,7 @@ public class Laser : MonoBehaviour
     {
         if (collision.gameObject.tag=="Player")
         {
-            global.changePlayerHealth(-15);
+            //global.changePlayerHealth(-15);
             Destroy(gameObject);
 
         }
