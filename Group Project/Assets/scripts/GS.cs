@@ -16,6 +16,7 @@ public class GS : MonoBehaviour
     void Start()
     {
         Spawn();
+        
     }
 
     // Update is called once per frame
