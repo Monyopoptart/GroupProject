@@ -4,7 +4,6 @@ public class GrapplingClaw : MonoBehaviour
 {
     public float maxThrowTime = 2.0f;
     bool throwFinish = false;
-    bool throwReset = true;
     GrapplingHook hook;
 
     private void Start()
@@ -29,7 +28,6 @@ public class GrapplingClaw : MonoBehaviour
     // Indicates the throw has begun
     public void ThrowInitiated()
     {
-        throwReset = false;
         Invoke("GrappleTimeout", maxThrowTime);
     }
 
@@ -37,7 +35,7 @@ public class GrapplingClaw : MonoBehaviour
     public void ResetAttachment()
     {
         throwFinish = false;
-        throwReset = true;
+        CancelInvoke();
         Debug.Log("Detached");
     }
 
@@ -45,7 +43,7 @@ public class GrapplingClaw : MonoBehaviour
     private void GrappleTimeout()
     {
         Debug.Log("Attempting grapple throw timeout");
-        if (!throwFinish && !throwReset)
+        if (!throwFinish)
         {
             hook.ResetGrapple();
         }

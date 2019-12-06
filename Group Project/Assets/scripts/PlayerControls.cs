@@ -55,23 +55,25 @@ public class PlayerControls : MonoBehaviour
             if (movementX < 0)
             {
                   transform.localScale = new Vector3(-1, 1, 1);
-               // if (sr.flipX != true)
+                  transform.GetChild(0).transform.localScale = new Vector3(-1, 1, 1);
+                // if (sr.flipX != true)
                 //{
-                  //  sr.flipX = true;
-                  //  Vector3 vec = sword.transform.localPosition;
-                  //  vec.x *= -1;
-                  //  sword.transform.localPosition = vec;
-               // }
+                //  sr.flipX = true;
+                //  Vector3 vec = sword.transform.localPosition;
+                //  vec.x *= -1;
+                //  sword.transform.localPosition = vec;
+                // }
             }
             else
             {
                 transform.localScale = new Vector3(1, 1, 1);
-               // if (sr.flipX != false)
+                transform.GetChild(0).transform.localScale = new Vector3(1, 1, 1);
+                // if (sr.flipX != false)
                 //{
-                 //   sr.flipX = false;
-                 //   Vector3 vec = sword.transform.localPosition;
-                   // vec.x *= -1;
-                   // sword.transform.localPosition = vec;
+                //   sr.flipX = false;
+                //   Vector3 vec = sword.transform.localPosition;
+                // vec.x *= -1;
+                // sword.transform.localPosition = vec;
                 //}
             }
             rb.velocity = new Vector2(movementX * speed, rb.velocity.y);

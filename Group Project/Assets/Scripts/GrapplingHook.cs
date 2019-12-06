@@ -116,10 +116,7 @@ public class GrapplingHook : MonoBehaviour
     // Resets the grapple if it is still pulling
     void GrappleTimeout()
     {
-        if (pulling)
-        {
-            ResetGrapple();
-        }
+        ResetGrapple();
     }
 
     // Resets the grapple to where it was
@@ -137,6 +134,7 @@ public class GrapplingHook : MonoBehaviour
         grapplingRB.velocity = Vector2.zero;
         grapplingRB.angularVelocity = 0;
         claw.ResetAttachment();
+        CancelInvoke();
         Debug.Log("Successful Reset");
 
         line.enabled = false;
