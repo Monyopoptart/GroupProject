@@ -85,7 +85,7 @@ public class PlayerControls : MonoBehaviour
         if (jumpValue > 0)
         {
             //trying to jump here
-            playerFeet = gameObject.transform.GetChild(2);
+            playerFeet = gameObject.transform.GetChild(1);
 
             Collider2D[] collisions = Physics2D.OverlapCircleAll(playerFeet.position, .5f);
 
