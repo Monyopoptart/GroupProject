@@ -55,6 +55,18 @@ public class FireGolbin : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.gameObject.tag == "Hook")
+        {
+            Debug.Log("Hook Collided");
+            //scoreComponent.ChangeScore(1);
+            firehealth -= 25;
+            if (firehealth == 0)
+            {
+                //scoreComponent.ChangeScore(1);
+                Destroy(gameObject);
+            }
+
+        }
         //else if (collision.gameObject.GetComponent<PlayerControls>() != null)
         //{
         //    collision.gameObject.GetComponent<PlayerControls>().ChangeHealth(-25);
