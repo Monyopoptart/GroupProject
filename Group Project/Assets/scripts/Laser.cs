@@ -10,7 +10,7 @@ public class Laser : MonoBehaviour
     {
         
     }
-    private void OnAnimatorMove()
+    private void Moveleft()
     {
         
 
