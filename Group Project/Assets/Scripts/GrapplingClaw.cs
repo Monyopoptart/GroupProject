@@ -10,7 +10,6 @@ public class GrapplingClaw : MonoBehaviour
     private void Start()
     {
         hook = gameObject.GetComponentInParent<GrapplingHook>();
-        Invoke("GrappleTimeout", maxThrowTime);
     }
     
     private void OnCollisionEnter2D(Collision2D col)
@@ -31,6 +30,7 @@ public class GrapplingClaw : MonoBehaviour
     public void ThrowInitiated()
     {
         throwReset = false;
+        Invoke("GrappleTimeout", maxThrowTime);
     }
 
     // Resets the state of the claw to indicate it has been reset
