@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3632405821415433284}
   m_Layer: 0
   m_Name: GrappleArm
-  m_TagString: Hook
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   pullForce: 750
   maxPullTime: 2
   maxPullVelocity: 40
+  maxClawVelocity: 40
   ropeWidth: 0.05
 --- !u!120 &3632405821415433284
 LineRenderer:
@@ -317,8 +318,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13385916, y: -0.33464906}
-  m_Size: {x: 0.7735977, y: 2.5807018}
+  m_Offset: {x: -0.1, y: -0.27999997}
+  m_Size: {x: 0.81, y: 2.49}
   m_Direction: 0
 --- !u!114 &5802325029532968413
 MonoBehaviour:
@@ -428,7 +429,7 @@ GameObject:
   - component: {fileID: 3632405821415433294}
   m_Layer: 0
   m_Name: GrapplingHook
-  m_TagString: Untagged
+  m_TagString: Hook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

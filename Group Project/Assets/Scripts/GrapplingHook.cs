@@ -6,6 +6,7 @@ public class GrapplingHook : MonoBehaviour
     public float pullForce = 750.0f;
     public float maxPullTime = 2.0f;
     public float maxPullVelocity = 40.0f;
+    public float maxClawVelocity = 40.0f;
     public float ropeWidth = 0.05f;
     bool readyToFire = false, firing = false, pulling = false;
     float mouseAngle;
@@ -74,6 +75,7 @@ public class GrapplingHook : MonoBehaviour
             Quaternion targetRotation = Quaternion.AngleAxis(Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5.0f * Time.deltaTime);
         }
+
         // Pulls
         else if (pulling)
         {
@@ -114,10 +116,7 @@ public class GrapplingHook : MonoBehaviour
     // Resets the grapple if it is still pulling
     void GrappleTimeout()
     {
-        if (pulling)
-        {
-            ResetGrapple();
-        }
+        ResetGrapple();
     }
 
     // Resets the grapple to where it was
@@ -132,7 +131,10 @@ public class GrapplingHook : MonoBehaviour
         grapplingSR.enabled = false;
         grapple.transform.localPosition = new Vector2(0 + 2, 0);
         grapple.transform.localRotation = Quaternion.Euler(0, 0, -45);
+        grapplingRB.velocity = Vector2.zero;
+        grapplingRB.angularVelocity = 0;
         claw.ResetAttachment();
+        CancelInvoke();
         Debug.Log("Successful Reset");
 
         line.enabled = false;
