@@ -46,6 +46,7 @@ public class Globals : MonoBehaviour
         maxHealth = 100;
         playerScore = 0;
         currentLevel = 1;
+        maxLevel = 1;
     }
 
     public void changePlayerHealth(float change) //Public function that can be call by other scripts. 

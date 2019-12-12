@@ -121,6 +121,7 @@ public class Menu : MonoBehaviour
     void SetLevelsInteractable()
     {
         ushort maxLvl = GameObject.FindObjectOfType<Globals>().returnMaxLevel();
+        // Sets which levels aren't interactable
         switch (maxLvl)
         {
             case 1:
@@ -131,6 +132,19 @@ public class Menu : MonoBehaviour
                 goto case 3;
             case 3:
                 Level4.interactable = false;
+                break;
+        }
+        // Sets which levels ARE interactable
+        switch (maxLvl)
+        {
+            case 4:
+                Level4.interactable = true;
+                goto case 3;
+            case 3:
+                Level3.interactable = true;
+                goto case 2;
+            case 2:
+                Level2.interactable = true;
                 break;
         }
     }
