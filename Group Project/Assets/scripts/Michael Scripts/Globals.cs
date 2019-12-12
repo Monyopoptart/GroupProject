@@ -9,9 +9,10 @@ public class Globals : MonoBehaviour
     private static float playerHealth = 100; //Private because it will need to be changed by public function changePlayerHealth(float change);
     private static float maxHealth = 100;
     private static int playerScore = 0;
+    private static ushort currentLevel = 1;
+    private static ushort maxLevel = 1;
     public GameObject Player; //Insert player prefab here so that we can access public functions.
     public GameObject UICanvas;
-    //public Slider playerHealthSlider; //Players health will appear with this slider
     // Start is called before the first frame update
 
     void Start()
@@ -39,6 +40,14 @@ public class Globals : MonoBehaviour
         }
     }
 
+    public void resetProgress()
+    {
+        playerHealth = 100;
+        maxHealth = 100;
+        playerScore = 0;
+        currentLevel = 1;
+    }
+
     public void changePlayerHealth(float change) //Public function that can be call by other scripts. 
     {
         playerHealth += change; //health will add change to itself
@@ -51,14 +60,6 @@ public class Globals : MonoBehaviour
             Debug.Log("You forgot to hook in the UI Canvas to your Globals script!");
         }
     }
-
-    //We actually don't need this function anymore. Let's try to avoid using Static references from now on because my bad -Michael
-    // The static function may cause issues with the UI. If you need to use it, let me know and I will try to fix it -Phillip
-    //public static void changePlayerHealthStatic(float change)
-    //{
-    //    playerHealth += change; //This is a static version of the above function so that we can change the health.
-    //    Debug.Log("Health is " + returnHealth());
-    //}
 
     public void changePlayerScore(int change) //Public function that can be call by other scripts. 
     {
@@ -82,6 +83,19 @@ public class Globals : MonoBehaviour
     private static int returnScore()
     {
         return playerScore;
+    }
+
+    public ushort returnCurrentLevel()
+    {
+        return currentLevel;
+    }
+    public ushort returnMaxLevel()
+    {
+        return maxLevel;
+    }
+    public void unlockAllLevels()
+    {
+        maxLevel = 4;
     }
 
     void Quit() // Exit the application
