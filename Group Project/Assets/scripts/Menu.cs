@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public Text ScoreText;
     public Button LevelSelect; //Place Play button here
     public Button Level1, Level2, Level3, Level4;
     public Button Quit;
@@ -14,64 +15,50 @@ public class Menu : MonoBehaviour
     public Button ResetProgress;
     public Button UnlockLevelsCheat;
     public Button RestartCurrLevel;
+    public Button NextLevel;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(ScoreText != null)
+            ScoreText.text = "Score: " + GameObject.FindObjectOfType<Globals>().returnScore();
+
         if(LevelSelect != null)
-        {
-            Button PlayBtn = LevelSelect.GetComponent<Button>(); //Calls the play button and finds it's Button component
-            PlayBtn.onClick.AddListener(PlayOnClick); //When play is clicked, loads the next scene
-        }
+            LevelSelect.GetComponent<Button>().onClick.AddListener(PlayOnClick);
 
         if(Level1 != null)
         {
-            Button Level1Btn = Level1.GetComponent<Button>();
-            Level1Btn.onClick.AddListener(delegate { LoadLevel(1); });
-
-            Button Level2Btn = Level2.GetComponent<Button>();
-            Level2Btn.onClick.AddListener(delegate { LoadLevel(2); });
-
-            Button Level3Btn = Level3.GetComponent<Button>();
-            Level3Btn.onClick.AddListener(delegate { LoadLevel(3); });
-
-            Button Level4Btn = Level4.GetComponent<Button>();
-            Level4Btn.onClick.AddListener(delegate { LoadLevel(4); });
+            Level1.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(1); });
+            Level2.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(2); });
+            Level3.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(3); });
+            Level4.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(4); });
 
             SetLevelsInteractable();
         }
 
         if (Quit != null)
-        {
-            Button QuitBtn = Quit.GetComponent<Button>();
-            QuitBtn.onClick.AddListener(QuitOnClick);
-        }
-        if(Credits != null)
-        {
-            Button CreditsBtn = Credits.GetComponent<Button>();
-            CreditsBtn.onClick.AddListener(CreditsOnClick);
-        }
-        if(MainMenu != null)
-        {
-            Button MainMenuBtn = MainMenu.GetComponent<Button>();
-            MainMenuBtn.onClick.AddListener(MainMenuOnClick);
-        }
-        if(ResetProgress != null)
-        {
-            Button ResetProgressBtn = ResetProgress.GetComponent<Button>();
-            ResetProgressBtn.onClick.AddListener(ResetProgressOnClick);
-        }
-        if(UnlockLevelsCheat != null)
-        {
-            Button UnlockLvlsBtn = UnlockLevelsCheat.GetComponent<Button>();
-            UnlockLvlsBtn.onClick.AddListener(UnlockLevelsOnClick);
-        }
-        if(RestartCurrLevel != null)
-        {
-            Button RestartBtn = RestartCurrLevel.GetComponent<Button>();
-            RestartBtn.onClick.AddListener(delegate { LoadLevel(GameObject.FindObjectOfType<Globals>().returnCurrentLevel()); });
-        }
+            Quit.GetComponent<Button>().onClick.AddListener(QuitOnClick);
 
+        if(Credits != null)
+            Credits.GetComponent<Button>().onClick.AddListener(CreditsOnClick);
+
+        if(MainMenu != null)
+            MainMenu.GetComponent<Button>().onClick.AddListener(MainMenuOnClick);
+
+        if(ResetProgress != null)
+            ResetProgress.GetComponent<Button>().onClick.AddListener(ResetProgressOnClick);
+
+        if(UnlockLevelsCheat != null)
+            UnlockLevelsCheat.GetComponent<Button>().onClick.AddListener(UnlockLevelsOnClick);
+
+        if(RestartCurrLevel != null)
+            RestartCurrLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(GameObject.FindObjectOfType<Globals>().returnCurrentLevel()); });
+
+        if(NextLevel != null)
+        {
+            ushort level = GameObject.FindObjectOfType<Globals>().returnCurrentLevel();
+            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(++level); });
+        }
     }
 
     // Update is called once per frame
@@ -87,7 +74,7 @@ public class Menu : MonoBehaviour
 
     void LoadLevel(ushort level)
     {
-        SceneManager.LoadScene("Level" + level.ToString());
+        SceneManager.LoadScene("Level" + level);
     }
 
     void QuitOnClick()

@@ -56,7 +56,7 @@ public class Globals : MonoBehaviour
         return playerHealth;
     }
 
-    private static int returnScore()
+    public int returnScore()
     {
         return playerScore;
     }
@@ -68,6 +68,10 @@ public class Globals : MonoBehaviour
     public ushort returnMaxLevel()
     {
         return maxLevel;
+    }
+    public ushort returnFinalLevel()
+    {
+        return finalLevel;
     }
     public void unlockAllLevels()
     {
