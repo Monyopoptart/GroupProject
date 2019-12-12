@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class portal : MonoBehaviour
 {
     public string levelToSwichTo;
+    //Score count = FindObjectOfType<Score>(); We don't want to use FindObjectsOfType because they take up a lot of memeroy and we can reference Score directly -Michael.
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<PlayerControls>() !=null)
+        if (collision.gameObject.tag == "Player")
         {
-            Score count = FindObjectOfType<Score>();
-            PlayerPrefs.SetInt("Score", count.getScore());
+            //PlayerPrefs.SetInt("Score", count.getScore());
             PlayerPrefs.Save();
-
             SceneManager.LoadScene(levelToSwichTo);
-        }
+
+        }       
     }
 }
