@@ -6,20 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public Button Play; //Place Play button here
+    public Button LevelSelect; //Place Play button here
     public Button Level1, Level2, Level3, Level4;
     public Button Quit;
     public Button Credits;
     public Button MainMenu;
     public Button ResetProgress;
     public Button UnlockLevelsCheat;
+    public Button RestartCurrLevel;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(Play != null)
+        if(LevelSelect != null)
         {
-            Button PlayBtn = Play.GetComponent<Button>(); //Calls the play button and finds it's Button component
+            Button PlayBtn = LevelSelect.GetComponent<Button>(); //Calls the play button and finds it's Button component
             PlayBtn.onClick.AddListener(PlayOnClick); //When play is clicked, loads the next scene
         }
 
@@ -64,6 +65,11 @@ public class Menu : MonoBehaviour
         {
             Button UnlockLvlsBtn = UnlockLevelsCheat.GetComponent<Button>();
             UnlockLvlsBtn.onClick.AddListener(UnlockLevelsOnClick);
+        }
+        if(RestartCurrLevel != null)
+        {
+            Button RestartBtn = RestartCurrLevel.GetComponent<Button>();
+            RestartBtn.onClick.AddListener(delegate { LoadLevel(GameObject.FindObjectOfType<Globals>().returnCurrentLevel()); });
         }
 
     }

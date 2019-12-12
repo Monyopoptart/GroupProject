@@ -1,43 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Globals : MonoBehaviour
 {
-    private static float playerHealth = 100; //Private because it will need to be changed by public function changePlayerHealth(float change);
+    private static float playerHealth = 100;    //Private because it will need to be changed by public function changePlayerHealth(float change);
     private static float maxHealth = 100;
     private static int playerScore = 0;
     private static ushort currentLevel = 1;
-    private static ushort maxLevel = 1;
-    public GameObject Player; //Insert player prefab here so that we can access public functions.
+    private static ushort maxLevel = 1;         // Maximum level achieved by player
+    private static ushort finalLevel = 4;       // Final level in the entire game
+    public GameObject Player;                   // Insert player prefab here so that we can access public functions.
     public GameObject UICanvas;
-    // Start is called before the first frame update
 
     void Start()
     {
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //playerHealthSlider.value = playerHealth / maxHealth; //Changes the slider health. We will move this out of Update() once we have more of our game finished.
-        // I made some hearts and animated them. I think it will be more visually appealing than a slider if you guys are okay with using them. -Phillip
-        if (returnHealth() < 0 || returnHealth() == 0)
-        {
-            if (Player.GetComponent<PlayerControls>() != null)
-            {
-                Player.GetComponent<PlayerControls>().Respawn();
-                playerHealth = 100;
-                UICanvas.GetComponent<UI>().UpdateHealth(playerHealth, maxHealth);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
     }
 
     public void resetProgress()
@@ -52,28 +32,23 @@ public class Globals : MonoBehaviour
     public void changePlayerHealth(float change) //Public function that can be call by other scripts. 
     {
         playerHealth += change; //health will add change to itself
-        Debug.Log("Health is " + returnHealth());
+        if(playerHealth <= 0)
+            SceneManager.LoadScene("LoseScreen");
         if(UICanvas != null)
-        {
             UICanvas.GetComponent<UI>().UpdateHealth(playerHealth, maxHealth);
-        } else
-        {
+        else
             Debug.Log("You forgot to hook in the UI Canvas to your Globals script!");
-        }
+        //Debug.Log("Health is " + returnHealth());
     }
 
     public void changePlayerScore(int change) //Public function that can be call by other scripts. 
     {
         playerScore += change; //Score will add change to itself
-        Debug.Log("Score is " + returnScore());
         if (UICanvas != null)
-        {
             UICanvas.GetComponent<UI>().UpdateScore(playerScore);
-        }
         else
-        {
             Debug.Log("You forgot to hook in the UI Canvas to your Globals script!");
-        }
+        //Debug.Log("Score is " + returnScore());
     }
 
     private static float returnHealth() //Static function that allows only this Script to return the player Health
