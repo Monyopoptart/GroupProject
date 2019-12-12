@@ -12,6 +12,7 @@ public class PlayerControls : MonoBehaviour
     Transform sword = null;
 	Rigidbody2D rb;
     bool canJump = false;
+    private bool canSwim = false;
     //public int health = 100; By changing health to global, we no longer need this
     Vector3 startPoint;
     Animator anim;
@@ -23,7 +24,7 @@ public class PlayerControls : MonoBehaviour
         startPoint = transform.position;
 		rb = GetComponent<Rigidbody2D>();
         playerFeet = gameObject.transform.GetChild(0);
-        
+        canSwim = false;
         sr = GetComponent<SpriteRenderer>();
         sword = transform.GetChild(2); //save for later. Hit box soon
     }
@@ -84,30 +85,7 @@ public class PlayerControls : MonoBehaviour
         else
             anim.SetBool("is Walking", false);
 
-        float jumpValue = Input.GetAxis("Jump");
-        canJump = false;
-        if (jumpValue > 0)
-        {
-            //trying to jump here
-            playerFeet = gameObject.transform.GetChild(1);
-
-            Collider2D[] collisions = Physics2D.OverlapCircleAll(playerFeet.position, .5f);
-
-            //Ray casting
-            //means 'cast' or draw a ray out in one direction and check
-            //what colliders we encounter in that direction
-            //Physics2D.RaycastAll(playerFeet.position, new Vector2(0, -1), 1);
-
-            for(int i = 0; i < collisions.Length; ++i)
-            {
-                if (collisions[i].gameObject != gameObject)
-                {
-                    Debug.Log("Can jump is true");
-                    canJump = true;
-                    break;
-                }
-            }
-        }
+        
         
         #region Attacking
         float attackValue = Input.GetAxis("Fire1");
@@ -124,7 +102,45 @@ public class PlayerControls : MonoBehaviour
 
 
         #endregion
-        
+        #region Swimming and Jumping
+
+            float jumpValue = Input.GetAxis("Jump");
+        if (canSwim)
+        {
+            anim.SetBool("isSwimming", true);
+            if (jumpValue >0)
+                canJump = true;
+        }
+        else
+        {
+            anim.SetBool("isSwimming", false);
+            canJump = false;
+            if (jumpValue > 0)
+            {
+                //trying to jump here
+                playerFeet = gameObject.transform.GetChild(1);
+
+                Collider2D[] collisions = Physics2D.OverlapCircleAll(playerFeet.position, .5f);
+
+                //Ray casting
+                //means 'cast' or draw a ray out in one direction and check
+                //what colliders we encounter in that direction
+                //Physics2D.RaycastAll(playerFeet.position, new Vector2(0, -1), 1);
+
+                for (int i = 0; i < collisions.Length; ++i)
+                {
+                    if (collisions[i].gameObject != gameObject)
+                    {
+                        Debug.Log("Can jump is true");
+                        canJump = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        #endregion
+
     }
 
     void FixedUpdate()//Synced with physics, do movement here, input in Update
@@ -133,6 +149,7 @@ public class PlayerControls : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, 350));
+            canJump = false;
         }
     }
 
@@ -146,5 +163,9 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("Enemy touched you");
         }
     }
-
+    public void enableSwim()
+    {
+        canSwim = !canSwim;
+        
+    }
 }
