@@ -6,6 +6,7 @@ using UnityEngine;
 public class Potion : MonoBehaviour
 {
     public int healing = 0;
+    public GameObject Global;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class Potion : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerControls>() != null)
         {
-            Globals.changePlayerHealthStatic(50);
+            Global.GetComponent<Globals>().changePlayerHealth(50);
             Destroy(gameObject);
         }
 

@@ -26,8 +26,16 @@ public class Globals : MonoBehaviour
         // I made some hearts and animated them. I think it will be more visually appealing than a slider if you guys are okay with using them. -Phillip
         if (returnHealth() < 0 || returnHealth() == 0)
         {
-            //Quit();
-            // We'll need this to boot the player to a lose screen. I can get win and lose screens done in the next 2 weeks -Phillip
+            if (Player.GetComponent<PlayerControls>() != null)
+            {
+                Player.GetComponent<PlayerControls>().Respawn();
+                playerHealth = 100;
+                UICanvas.GetComponent<UI>().UpdateHealth(playerHealth, maxHealth);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -44,12 +52,13 @@ public class Globals : MonoBehaviour
         }
     }
 
+    //We actually don't need this function anymore. Let's try to avoid using Static references from now on because my bad -Michael
     // The static function may cause issues with the UI. If you need to use it, let me know and I will try to fix it -Phillip
-    public static void changePlayerHealthStatic(float change)
-    {
-        playerHealth += change; //This is a static version of the above function so that we can change the health.
-        Debug.Log("Health is " + returnHealth());
-    }
+    //public static void changePlayerHealthStatic(float change)
+    //{
+    //    playerHealth += change; //This is a static version of the above function so that we can change the health.
+    //    Debug.Log("Health is " + returnHealth());
+    //}
 
     public void changePlayerScore(int change) //Public function that can be call by other scripts. 
     {
