@@ -15,20 +15,29 @@ public class Enemies : MonoBehaviour
     void Start()
     {
         //scoreComponent = GameObject.FindObjectOfType<Score>(); Is the score script necessary since the portal is our objective?
-        target = GameObject.FindObjectOfType<PlayerControls>().transform;
+        if (target != null)
+            target = GameObject.FindObjectOfType<PlayerControls>().transform;
+        else
+            Debug.Log("No target linked in");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 deltaVec = target.position - transform.position;
-        deltaVec = Vector3.Normalize(deltaVec);
+        if (target != null)
+        {
+            Vector3 deltaVec = target.position - transform.position;
+            deltaVec = Vector3.Normalize(deltaVec);
 
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if(rb != null)
-            rb.velocity = deltaVec * speed;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+                rb.velocity = deltaVec * speed;
+            else
+                transform.position += deltaVec * speed * Time.deltaTime;
+        }
         else
-            transform.position += deltaVec * speed * Time.deltaTime;
+            Debug.Log("No target hooked in.");
         
     }
 
