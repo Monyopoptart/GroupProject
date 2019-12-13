@@ -15,6 +15,8 @@ public class FireGolbin : MonoBehaviour
     public float speed = 3;
     public AudioClip soundEffect;
     public AudioSource musicSource;
+    bool isLeft;
+    bool isRight;
 
 
 
@@ -22,7 +24,9 @@ public class FireGolbin : MonoBehaviour
     void Start()
     {
         //scoreComponent = GameObject.FindObjectOfType<Score>();
-        target = GameObject.FindObjectOfType<PlayerControls>().transform;
+        //target = GameObject.FindObjectOfType<PlayerControls>().transform;
+        isLeft = true;
+        isRight = true;
     }
 
     // Update is called once per frame
@@ -30,25 +34,60 @@ public class FireGolbin : MonoBehaviour
     {
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (target != null)
+        if (target != null) //If goblin has a target, follow the target
         {
             Vector3 deltaVec = target.position - transform.position;
-            deltaVec = Vector3.Normalize(deltaVec);
-            if (gameObject.transform.position.x > BoundaryLeft.position.x && gameObject.transform.position.x < BoundaryRight.position.x) //Checks to see if the goblin is within the boundaries set up
-            {
-                if (rb != null)
-                    rb.velocity = deltaVec * speed;
-                else
-                    transform.position += deltaVec * speed * Time.deltaTime;
-            }
-            else //If it is not, will move in the opposite direction
-                rb.velocity = deltaVec * -speed;
+            deltaVec = Vector3.Normalize(deltaVec); //find direction and normalize
+
+            if (rb != null) //This should always be true.
+                rb.velocity = deltaVec * speed; //Follow target
+            else
+                Debug.Log("This script will crash. You need to give this object a RigidBody");    
+  
         }
-        else
-            return;
+        else //If no target, patrol between the two boundaries
+        {
+            Debug.Log("There is no Target. This unit will Patrol");
+            Patrol();
+        }
 
     }
 
+    private void Patrol() //Swaps target between bourndaries
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        //Both start true, so left boundary will be first target
+        if (isLeft) 
+        {
+            Debug.Log("Moving towards left boundary");
+            Vector3 deltaVec = BoundaryLeft.position - transform.position;
+            deltaVec = Vector3.Normalize(deltaVec);
+
+            rb.velocity = deltaVec * speed;
+
+            if (BoundaryLeft.position.x+1 >= transform.position.x)
+            {
+                Debug.Log("Shifting to right boundary");
+                isLeft = false;
+                isRight = true;
+            }
+        }
+        else if (isRight)
+        {
+            Debug.Log("Moving towards right boundary");
+            Vector3 deltaVec = BoundaryRight.position - transform.position;
+            deltaVec = Vector3.Normalize(deltaVec);
+
+            rb.velocity = deltaVec * speed;
+
+            if (BoundaryRight.position.x-1 <= transform.position.x)
+            {
+                Debug.Log("Shifting to left boundary");
+                isLeft = true;
+                isRight = false;
+            }
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (musicSource != null)
