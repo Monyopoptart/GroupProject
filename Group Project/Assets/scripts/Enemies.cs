@@ -35,8 +35,11 @@ public class Enemies : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        musicSource.clip = IntroMusic;
-        musicSource.Play();
+        if (musicSource != null)
+        {
+            musicSource.clip = IntroMusic;
+            musicSource.Play();
+        }
         //if(collision.gameObject.tag == "laser")
         if (collision.gameObject.GetComponent<Sword>() != null)
         {

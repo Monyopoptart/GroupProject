@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 500319041678864815}
   - component: {fileID: 736452155327691579}
   - component: {fileID: 3145481010042612892}
+  - component: {fileID: 5161284124616681553}
   m_Layer: 10
   m_Name: golem 325
   m_TagString: Enemy
@@ -241,5 +242,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0
-  IntroMusic: {fileID: 0}
-  musicSource: {fileID: 0}
+  enemyPointValue: 100
+  IntroMusic: {fileID: 8300000, guid: 440e1f14284be814b81d7864260f65ac, type: 3}
+  musicSource: {fileID: 736452155327691579}
+--- !u!114 &5161284124616681553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4989491637053921469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be495d58f538347bab994108d03b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifeTime: 3
+  prefabToSpawn: {fileID: 7292653163004731399, guid: a08761d1c50279649af490e0790e1a61,
+    type: 3}
+  spawnDelay: 10

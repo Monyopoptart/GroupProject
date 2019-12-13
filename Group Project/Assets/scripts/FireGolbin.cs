@@ -13,8 +13,10 @@ public class FireGolbin : MonoBehaviour
     public Transform BoundaryLeft;
     public Transform BoundaryRight;
     public float speed = 3;
+    public AudioClip soundEffect;
+    public AudioSource musicSource;
 
-  
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,25 +28,35 @@ public class FireGolbin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 deltaVec = target.position - transform.position;
-        deltaVec = Vector3.Normalize(deltaVec);
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (gameObject.transform.position.x > BoundaryLeft.position.x && gameObject.transform.position.x < BoundaryRight.position.x) //Checks to see if the goblin is within the boundaries set up
+        if (target != null)
         {
-            if (rb != null)
-                rb.velocity = deltaVec * speed;
-            else
-                transform.position += deltaVec * speed * Time.deltaTime;
+            Vector3 deltaVec = target.position - transform.position;
+            deltaVec = Vector3.Normalize(deltaVec);
+            if (gameObject.transform.position.x > BoundaryLeft.position.x && gameObject.transform.position.x < BoundaryRight.position.x) //Checks to see if the goblin is within the boundaries set up
+            {
+                if (rb != null)
+                    rb.velocity = deltaVec * speed;
+                else
+                    transform.position += deltaVec * speed * Time.deltaTime;
+            }
+            else //If it is not, will move in the opposite direction
+                rb.velocity = deltaVec * -speed;
         }
-        else //If it is not, will move in the opposite direction
-            rb.velocity = deltaVec * -speed;
+        else
+            return;
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (musicSource != null)
+        {
+            musicSource.clip = soundEffect;
+            musicSource.Play();
+        }
+
         //if(collision.gameObject.tag == "laser")
         if (collision.gameObject.GetComponent<Sword>() != null)
         {

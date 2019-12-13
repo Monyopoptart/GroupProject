@@ -16,6 +16,7 @@ public class portal : MonoBehaviour
                 SceneManager.LoadScene("GameWin");
             else
             {
+                globals.increaseCurrentLevel();
                 Debug.Log("You finished level " + thisIstheLevel);
                 SceneManager.LoadScene("WinScreen");
             }

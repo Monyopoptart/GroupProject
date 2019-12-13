@@ -22,7 +22,7 @@ public class Globals : MonoBehaviour
             if (maxLevel > levelNumber)
                 maxLevel = levelNumber;
             playerHealth = 100;
-            playerScore = 0; // Feel free to remove this line if you want the score persistent across levels
+            //playerScore = 0; // Feel free to remove this line if you want the score persistent across levels
         }
     }
 
@@ -89,6 +89,12 @@ public class Globals : MonoBehaviour
         maxLevel = 4;
     }
 
+    public void increaseCurrentLevel()
+    {
+        currentLevel++; //When player reaches the end of a level, the current level increases
+        if (maxLevel < currentLevel) //Sets max level to current level
+            maxLevel = currentLevel;
+    }
     void Quit() // Exit the application
     {
 #if UNITY_EDITOR
