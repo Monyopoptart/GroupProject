@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 //Robert Bunch worked on this
-public class Portal : MonoBehaviour
+public class portal : MonoBehaviour
 {
 
     ushort thisIstheLevel;
