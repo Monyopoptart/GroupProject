@@ -12,7 +12,7 @@ public class Killzone : MonoBehaviour
             player.Respawn();
         else
         {
-            Destroy(collision.gameObject);
+            Debug.Log("Something touched the Killzone");
         }
     }
 
