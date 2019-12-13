@@ -4,15 +4,23 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
 
+    ushort thisIstheLevel;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Globals globals = FindObjectOfType<Globals>();
+        thisIstheLevel = globals.returnCurrentLevel();
+
         if (collision.gameObject.tag == "Player")
         {
-            Globals globals = FindObjectOfType<Globals>();
             if (globals.returnCurrentLevel() == globals.returnFinalLevel())
                 SceneManager.LoadScene("GameWin");
             else
+            {
+                Debug.Log("You finished level " + thisIstheLevel);
+                globals.increaseCurrentLevel();
                 SceneManager.LoadScene("WinScreen");
+            }
+
         }       
     }
 }

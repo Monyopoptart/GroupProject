@@ -55,7 +55,7 @@ public class Menu : MonoBehaviour
         if(NextLevel != null)
         {
             ushort level = GameObject.FindObjectOfType<Globals>().returnCurrentLevel();
-            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(++level); });
+            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(level); });
         }
     }
 
@@ -111,7 +111,7 @@ public class Menu : MonoBehaviour
 
     void SetLevelsInteractable()
     {
-        ushort maxLvl = GameObject.FindObjectOfType<Globals>().returnMaxLevel();
+        ushort maxLvl = GameObject.FindObjectOfType<Globals>().returnCurrentLevel();
         // Sets which levels aren't interactable
         switch (maxLvl)
         {

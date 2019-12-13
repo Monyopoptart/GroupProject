@@ -18,6 +18,7 @@ public class Globals : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Current Level: " + currentLevel);
     }
 
     public void resetProgress()
@@ -32,9 +33,12 @@ public class Globals : MonoBehaviour
     public void changePlayerHealth(float change) //Public function that can be call by other scripts. 
     {
         playerHealth += change; //health will add change to itself
-        if(playerHealth <= 0)
+        if (playerHealth <= 0)
+        {
+            playerHealth = 100;
             SceneManager.LoadScene("LoseScreen");
-        if(UICanvas != null)
+        }
+        if (UICanvas != null)
             UICanvas.GetComponent<UI>().UpdateHealth(playerHealth, maxHealth);
         else
             Debug.Log("You forgot to hook in the UI Canvas to your Globals script!");
@@ -76,6 +80,11 @@ public class Globals : MonoBehaviour
     public void unlockAllLevels()
     {
         maxLevel = 4;
+    }
+
+    public void increaseCurrentLevel()
+    {
+        currentLevel++;
     }
 
     void Quit() // Exit the application

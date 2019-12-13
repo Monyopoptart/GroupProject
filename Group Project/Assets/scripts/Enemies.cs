@@ -9,6 +9,8 @@ public class Enemies : MonoBehaviour
     Score scoreComponent;
     public Transform target;
     public float speed = 3;
+    public AudioClip IntroMusic;
+    public AudioSource musicSource;
     void Start()
     {
         scoreComponent = GameObject.FindObjectOfType<Score>();
@@ -32,7 +34,8 @@ public class Enemies : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
-
+        musicSource.clip = IntroMusic;
+        musicSource.Play();
         //if(collision.gameObject.tag == "laser")
         if (collision.gameObject.GetComponent<Sword>() != null)
         {
