@@ -16,7 +16,9 @@ public class portal : MonoBehaviour
                 SceneManager.LoadScene("GameWin");
             else
             {
-                globals.increaseCurrentLevel();
+                // We can't use the portal to increase the current level because the player might return to a previous level and it will cause issues
+                // That is why the level needs to be set at the beginning of a level -Phillip
+                //globals.increaseCurrentLevel();
                 Debug.Log("You finished level " + thisIstheLevel);
                 SceneManager.LoadScene("WinScreen");
             }
