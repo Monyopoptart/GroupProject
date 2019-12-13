@@ -1375,6 +1375,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: -1540470372201196296, guid: 5299b6448aedd23459203be00f3095dc,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5299b6448aedd23459203be00f3095dc, type: 3}
 --- !u!4 &561997925 stripped
@@ -1689,6 +1694,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Globals
       objectReference: {fileID: 0}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: levelNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: isNewLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1917604994}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 764968973}
     - target: {fileID: 5383100409995912945, guid: 2f381e37302bb164aa017168a635cfbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1744,26 +1769,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
-        type: 3}
-      propertyPath: levelNumber
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
-        type: 3}
-      propertyPath: isNewLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
-        type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1917604994}
-    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
-        type: 3}
-      propertyPath: UICanvas
-      value: 
-      objectReference: {fileID: 764968973}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f381e37302bb164aa017168a635cfbc, type: 3}
 --- !u!1001 &744289440
@@ -1913,6 +1918,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: 5161284124616681553, guid: bf849564564abab4dbb0fa27e835ec5a,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf849564564abab4dbb0fa27e835ec5a, type: 3}
 --- !u!4 &751699281 stripped
@@ -2228,6 +2238,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: 6696361579437837640, guid: 987bdb076cd395248b4125ca49e629ce,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987bdb076cd395248b4125ca49e629ce, type: 3}
 --- !u!4 &827714161 stripped
@@ -2533,6 +2548,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: -1540470372201196296, guid: 5299b6448aedd23459203be00f3095dc,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5299b6448aedd23459203be00f3095dc, type: 3}
 --- !u!4 &933068634 stripped
@@ -2959,7 +2979,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.954811, y: 0.6133499}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2970,7 +2990,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 148.93846, y: 2.2266998}
+  m_Size: {x: 200, y: 2}
   m_EdgeRadius: 0
 --- !u!4 &1130834396
 Transform:
@@ -3208,6 +3228,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: 6696361579437837640, guid: 987bdb076cd395248b4125ca49e629ce,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987bdb076cd395248b4125ca49e629ce, type: 3}
 --- !u!4 &1288300502 stripped
@@ -3828,6 +3853,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: -1540470372201196296, guid: 5299b6448aedd23459203be00f3095dc,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5299b6448aedd23459203be00f3095dc, type: 3}
 --- !u!4 &1552219543 stripped
@@ -4133,6 +4163,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: -1540470372201196296, guid: 5299b6448aedd23459203be00f3095dc,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5299b6448aedd23459203be00f3095dc, type: 3}
 --- !u!4 &1853381547 stripped
@@ -4374,6 +4409,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: -1540470372201196296, guid: 5299b6448aedd23459203be00f3095dc,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5299b6448aedd23459203be00f3095dc, type: 3}
 --- !u!4 &1948058876 stripped
@@ -4529,6 +4569,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1917604993}
+    - target: {fileID: 6696361579437837640, guid: 987bdb076cd395248b4125ca49e629ce,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987bdb076cd395248b4125ca49e629ce, type: 3}
 --- !u!4 &2056121821 stripped
