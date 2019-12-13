@@ -90,6 +90,11 @@ public class Globals : MonoBehaviour
     {
         maxLevel = 4;
     }
+    public void setMaxLevel(ushort level)
+    {
+        if(maxLevel < finalLevel)
+            maxLevel = level;
+    }
 
     // Redundant with the code called in start() -Phillip
     //public void increaseCurrentLevel()

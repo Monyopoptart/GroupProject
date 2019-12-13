@@ -54,8 +54,11 @@ public class Menu : MonoBehaviour
 
         if(NextLevel != null)
         {
-            ushort level = GameObject.FindObjectOfType<Globals>().returnCurrentLevel(); // Current level is increased by touching the end portal
-            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(++level); }); // Loads next level
+            Globals globals = GameObject.FindObjectOfType<Globals>();
+            ushort nextLevel = globals.returnCurrentLevel(); // Current level is increased by touching the end portal
+            nextLevel++;
+            globals.setMaxLevel(nextLevel);
+            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(nextLevel); }); // Loads next level
         }
     }
 
