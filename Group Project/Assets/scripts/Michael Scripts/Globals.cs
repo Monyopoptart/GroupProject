@@ -6,14 +6,24 @@ public class Globals : MonoBehaviour
     private static float playerHealth = 100;    //Private because it will need to be changed by public function changePlayerHealth(float change);
     private static float maxHealth = 100;
     private static int playerScore = 0;
-    private static ushort currentLevel = 1;
+    private static ushort currentLevel = 1;     // Level player is currently on
     private static ushort maxLevel = 1;         // Maximum level achieved by player
     private static ushort finalLevel = 4;       // Final level in the entire game
     public GameObject Player;                   // Insert player prefab here so that we can access public functions.
     public GameObject UICanvas;
+    public bool isNewLevel = false;
+    public ushort levelNumber = 1;
 
     void Start()
     {
+        if (isNewLevel)
+        {
+            currentLevel = levelNumber;
+            if (maxLevel > levelNumber)
+                maxLevel = levelNumber;
+            playerHealth = 100;
+            playerScore = 0; // Feel free to remove this line if you want the score persistent across levels
+        }
     }
 
     void Update()
@@ -34,10 +44,7 @@ public class Globals : MonoBehaviour
     {
         playerHealth += change; //health will add change to itself
         if (playerHealth <= 0)
-        {
-            playerHealth = 100;
             SceneManager.LoadScene("LoseScreen");
-        }
         if (UICanvas != null)
             UICanvas.GetComponent<UI>().UpdateHealth(playerHealth, maxHealth);
         else
@@ -80,11 +87,6 @@ public class Globals : MonoBehaviour
     public void unlockAllLevels()
     {
         maxLevel = 4;
-    }
-
-    public void increaseCurrentLevel()
-    {
-        currentLevel++;
     }
 
     void Quit() // Exit the application

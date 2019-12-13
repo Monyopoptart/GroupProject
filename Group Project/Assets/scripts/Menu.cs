@@ -54,8 +54,8 @@ public class Menu : MonoBehaviour
 
         if(NextLevel != null)
         {
-            ushort level = GameObject.FindObjectOfType<Globals>().returnCurrentLevel();
-            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(level); });
+            ushort level = GameObject.FindObjectOfType<Globals>().returnCurrentLevel(); // Current level
+            NextLevel.GetComponent<Button>().onClick.AddListener(delegate { LoadLevel(++level); }); // Loads next level
         }
     }
 
@@ -111,7 +111,7 @@ public class Menu : MonoBehaviour
 
     void SetLevelsInteractable()
     {
-        ushort maxLvl = GameObject.FindObjectOfType<Globals>().returnCurrentLevel();
+        ushort maxLvl = GameObject.FindObjectOfType<Globals>().returnMaxLevel(); // Unlocked levels are based on maximum achieved level
         // Sets which levels aren't interactable
         switch (maxLvl)
         {
