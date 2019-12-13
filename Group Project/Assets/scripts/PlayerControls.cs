@@ -80,7 +80,8 @@ public class PlayerControls : MonoBehaviour
             }
             rb.velocity = new Vector2(movementX * speed, rb.velocity.y);
             sword.transform.position = Vector3.MoveTowards(gameObject.transform.position, sword.transform.position, 0);
-            anim.SetBool("is Walking", true);
+            if (!canSwim)
+                anim.SetBool("is Walking", true);
         }
         else
             anim.SetBool("is Walking", false);
@@ -108,6 +109,7 @@ public class PlayerControls : MonoBehaviour
         if (canSwim)
         {
             anim.SetBool("isSwimming", true);
+            anim.SetBool("is Walking", false);
             if (jumpValue >0)
                 canJump = true;
         }
