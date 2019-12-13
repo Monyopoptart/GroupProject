@@ -620,6 +620,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1215873937}
   speed: 0
+  enemyPointValue: 100
+  IntroMusic: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!114 &1061244175 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
@@ -780,32 +783,32 @@ PrefabInstance:
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6934814
+      value: -7.03
       objectReference: {fileID: 0}
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.946069
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.00000027613711
       objectReference: {fileID: 0}
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5802325029532968402, guid: 625f4a87bf679584a8f41fd5dfc617d5,
         type: 3}
