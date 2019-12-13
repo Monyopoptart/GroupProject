@@ -7,6 +7,7 @@ using UnityEngine;
 public class FireGolbin : MonoBehaviour
 {
     public int firehealth = 100;
+    public int enemyPointValue = 100;
     Score scoreComponent;
     public Transform target;
     public float speed = 3;
@@ -15,7 +16,7 @@ public class FireGolbin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreComponent = GameObject.FindObjectOfType<Score>();
+        //scoreComponent = GameObject.FindObjectOfType<Score>();
         target = GameObject.FindObjectOfType<PlayerControls>().transform;
     }
 
@@ -43,8 +44,9 @@ public class FireGolbin : MonoBehaviour
             firehealth -= 25;
             if(firehealth == 0)
             {
-            //scoreComponent.ChangeScore(1);
-            Destroy(gameObject);
+                //scoreComponent.ChangeScore(1);
+                GameObject.FindObjectOfType<Globals>().changePlayerScore(enemyPointValue);
+                Destroy(gameObject);
             }
         }
         if (collision.gameObject.tag == "Sword")
@@ -54,6 +56,7 @@ public class FireGolbin : MonoBehaviour
             if (firehealth == 0)
             {
                 //scoreComponent.ChangeScore(1);
+                GameObject.FindObjectOfType<Globals>().changePlayerScore(enemyPointValue);
                 Destroy(gameObject);
             }
         }
@@ -65,6 +68,7 @@ public class FireGolbin : MonoBehaviour
             if (firehealth == 0)
             {
                 //scoreComponent.ChangeScore(1);
+                GameObject.FindObjectOfType<Globals>().changePlayerScore(enemyPointValue);
                 Destroy(gameObject);
             }
 
