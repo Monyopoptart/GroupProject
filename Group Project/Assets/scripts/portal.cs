@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-//Robert Bunch worked on this
+//Robert, Michael, and Phillip worked on this a lot
 public class portal : MonoBehaviour
 {
 

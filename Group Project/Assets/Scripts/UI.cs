@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
+//Phillip worked on this one
 public class UI : MonoBehaviour
 {
     public GameObject[] hearts;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//I dont think we actually use this script but it's here anyway. Uh I think Amber and Michael worked on this but I'm not sure and I don't remember
 public class myGameMangager : MonoBehaviour
 {
     Score count;

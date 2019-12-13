@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
+//Michael and Phillip worked on this one
 public class Globals : MonoBehaviour
 {
     private static float playerHealth = 100;    //Private because it will need to be changed by public function changePlayerHealth(float change);

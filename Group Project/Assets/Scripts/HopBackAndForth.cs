@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Phillip worked on this
 public class HopBackAndForth : MonoBehaviour
 {
     public float magnitude = 1.0f;

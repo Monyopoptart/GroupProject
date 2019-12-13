@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Michael worked on this one
 public class ChangeColor : MonoBehaviour
 {
     private SpriteRenderer thisThing;

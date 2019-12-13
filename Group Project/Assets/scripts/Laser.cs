@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Amber worked on this
 public class Laser : MonoBehaviour
 {
     public int speed = 2;
