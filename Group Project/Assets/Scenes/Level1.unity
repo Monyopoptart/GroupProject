@@ -266,11 +266,21 @@ PrefabInstance:
       propertyPath: UICanvas
       value: 
       objectReference: {fileID: 469061374}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: isNewLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9019640700902288248, guid: 2f381e37302bb164aa017168a635cfbc,
         type: 3}
       propertyPath: m_Volume
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 9019640700902288248, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0935b409cff44ec4c9097ced75505a09, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f381e37302bb164aa017168a635cfbc, type: 3}
 --- !u!1001 &33400269

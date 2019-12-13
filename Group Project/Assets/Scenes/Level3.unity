@@ -8516,6 +8516,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 26032902}
   speed: 3
+  IntroMusic: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!4 &819951703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5587841626171564069, guid: 4f044e3e387bc8940832273505bf7109,
@@ -16355,16 +16357,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Globals
       objectReference: {fileID: 0}
-    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
-        type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 776205156}
-    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
-        type: 3}
-      propertyPath: UICanvas
-      value: 
-      objectReference: {fileID: 898102401}
     - target: {fileID: 5383100409995912945, guid: 2f381e37302bb164aa017168a635cfbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16420,6 +16412,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 776205156}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 898102401}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: isNewLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121092587595639246, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: levelNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019640700902288248, guid: 2f381e37302bb164aa017168a635cfbc,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0935b409cff44ec4c9097ced75505a09, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f381e37302bb164aa017168a635cfbc, type: 3}
 --- !u!4 &1558852278 stripped
@@ -16448,6 +16465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 26032902}
   speed: 3
+  IntroMusic: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!4 &1559513909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5587841626171564069, guid: 4f044e3e387bc8940832273505bf7109,
@@ -27436,6 +27455,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 26032902}
   speed: 3
+  IntroMusic: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!4 &2081961088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5587841626171564069, guid: 4f044e3e387bc8940832273505bf7109,
