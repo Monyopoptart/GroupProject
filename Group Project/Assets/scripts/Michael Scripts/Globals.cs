@@ -16,6 +16,8 @@ public class Globals : MonoBehaviour
 
     void Start()
     {
+        // For this to work properly you need to set isNewLevel to true for your level
+        // and set levelNumber to what number your level is (ex. level 2 is 2)
         if (isNewLevel)
         {
             currentLevel = levelNumber;
@@ -89,12 +91,14 @@ public class Globals : MonoBehaviour
         maxLevel = 4;
     }
 
-    public void increaseCurrentLevel()
-    {
-        currentLevel++; //When player reaches the end of a level, the current level increases
-        if (maxLevel < currentLevel) //Sets max level to current level
-            maxLevel = currentLevel;
-    }
+    // Redundant with the code called in start() -Phillip
+    //public void increaseCurrentLevel()
+    //{
+    //   currentLevel++; //When player reaches the end of a level, the current level increases
+    //    if (maxLevel < currentLevel) //Sets max level to current level
+    //        maxLevel = currentLevel;
+    //}
+
     void Quit() // Exit the application
     {
 #if UNITY_EDITOR
