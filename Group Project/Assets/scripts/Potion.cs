@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Robert Bunch worked on this
+//Robert Bunch worked on this however, we didnt really use it because the player health resets every level
 public class Potion : MonoBehaviour
 {
     public int healing = 0;

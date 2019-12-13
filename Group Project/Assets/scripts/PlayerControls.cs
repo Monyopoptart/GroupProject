@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //Robert Bunch worked on this
+//Everyone worked on this one a lot since we added so much stuff to it.
 public class PlayerControls : MonoBehaviour
 {
     //public Slider healthBar; By changing health to global, we no longer need this

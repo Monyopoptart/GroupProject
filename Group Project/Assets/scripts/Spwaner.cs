@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Amber and Michael Worked on this. However, we use the GS script instead of this one to spawn lazers and things
 public class Spwaner : MonoBehaviour
 {
     public float speed = 10;

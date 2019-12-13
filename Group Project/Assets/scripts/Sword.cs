@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Robert Bunch worked on this
+//Michael worked on this
 public class Sword : MonoBehaviour
 {
     public AudioClip Firecracker;

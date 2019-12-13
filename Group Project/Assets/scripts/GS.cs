@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Amber and Michael worked on this
 public class GS : MonoBehaviour
 
   

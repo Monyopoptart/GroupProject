@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Robert Bunch worked on this
+//Robert Bunch and Michael Sheen worked on this
 public class Enemies : MonoBehaviour
 {
     // Start is called before the first frame update
