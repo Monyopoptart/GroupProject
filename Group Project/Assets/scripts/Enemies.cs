@@ -9,11 +9,12 @@ public class Enemies : MonoBehaviour
     Score scoreComponent;
     public Transform target;
     public float speed = 3;
+    public int enemyPointValue = 100;
     public AudioClip IntroMusic;
     public AudioSource musicSource;
     void Start()
     {
-        scoreComponent = GameObject.FindObjectOfType<Score>();
+        //scoreComponent = GameObject.FindObjectOfType<Score>(); Is the score script necessary since the portal is our objective?
         target = GameObject.FindObjectOfType<PlayerControls>().transform;
     }
 
@@ -42,12 +43,14 @@ public class Enemies : MonoBehaviour
             
             Debug.Log("Test2");
             //scoreComponent.ChangeScore(1);
+            GameObject.FindObjectOfType<Globals>().changePlayerScore(enemyPointValue);
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Sword")
         {
             Debug.Log("Sword Collided");
             //scoreComponent.ChangeScore(1);
+            GameObject.FindObjectOfType<Globals>().changePlayerScore(enemyPointValue);
             Destroy(gameObject);
             
         }
@@ -55,6 +58,7 @@ public class Enemies : MonoBehaviour
         {
             Debug.Log("Hook Collided");
             //scoreComponent.ChangeScore(1);
+            GameObject.FindObjectOfType<Globals>().changePlayerScore(enemyPointValue);
             Destroy(gameObject);
 
         }
