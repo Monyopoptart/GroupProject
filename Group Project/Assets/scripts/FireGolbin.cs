@@ -10,7 +10,10 @@ public class FireGolbin : MonoBehaviour
     public int enemyPointValue = 100;
     Score scoreComponent;
     public Transform target;
+    public Transform BoundaryLeft;
+    public Transform BoundaryRight;
     public float speed = 3;
+
   
 
     // Start is called before the first frame update
@@ -27,10 +30,15 @@ public class FireGolbin : MonoBehaviour
         deltaVec = Vector3.Normalize(deltaVec);
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb != null)
-            rb.velocity = deltaVec * speed;
-        else
-            transform.position += deltaVec * speed * Time.deltaTime;
+        if (gameObject.transform.position.x > BoundaryLeft.position.x && gameObject.transform.position.x < BoundaryRight.position.x) //Checks to see if the goblin is within the boundaries set up
+        {
+            if (rb != null)
+                rb.velocity = deltaVec * speed;
+            else
+                transform.position += deltaVec * speed * Time.deltaTime;
+        }
+        else //If it is not, will move in the opposite direction
+            rb.velocity = deltaVec * -speed;
 
     }
 

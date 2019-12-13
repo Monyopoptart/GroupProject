@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 3
+  enemyPointValue: 50
   IntroMusic: {fileID: 0}
   musicSource: {fileID: 0}
 --- !u!82 &8455731242925497896

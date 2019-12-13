@@ -154,5 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firehealth: 100
+  enemyPointValue: 200
   target: {fileID: 0}
   speed: 3

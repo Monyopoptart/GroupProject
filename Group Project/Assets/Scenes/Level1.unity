@@ -880,40 +880,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506155282}
-  - component: {fileID: 506155281}
   m_Layer: 9
-  m_Name: GameObject (2)
+  m_Name: GoblinBoundary Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &506155281
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506155280}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.86698735}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.7339747}
-  m_EdgeRadius: 0
 --- !u!4 &506155282
 Transform:
   m_ObjectHideFlags: 0
@@ -1769,40 +1742,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1294201650}
-  - component: {fileID: 1294201649}
   m_Layer: 9
-  m_Name: GameObject (1)
+  m_Name: GoblinBoundary Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1294201649
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294201648}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.86698735}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.7339747}
-  m_EdgeRadius: 0
 --- !u!4 &1294201650
 Transform:
   m_ObjectHideFlags: 0
@@ -2152,13 +2098,23 @@ PrefabInstance:
     - target: {fileID: 3171509570957234074, guid: 987bdb076cd395248b4125ca49e629ce,
         type: 3}
       propertyPath: m_Constraints
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6696361579437837640, guid: 987bdb076cd395248b4125ca49e629ce,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 7128382399368865707}
+    - target: {fileID: 6696361579437837640, guid: 987bdb076cd395248b4125ca49e629ce,
+        type: 3}
+      propertyPath: BoundaryLeft
+      value: 
+      objectReference: {fileID: 1294201650}
+    - target: {fileID: 6696361579437837640, guid: 987bdb076cd395248b4125ca49e629ce,
+        type: 3}
+      propertyPath: BoundaryRight
+      value: 
+      objectReference: {fileID: 506155282}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987bdb076cd395248b4125ca49e629ce, type: 3}
 --- !u!1001 &1557092841
@@ -2889,6 +2845,11 @@ PrefabInstance:
       propertyPath: global
       value: 
       objectReference: {fileID: 2126742415}
+    - target: {fileID: 5802325029532968400, guid: 625f4a87bf679584a8f41fd5dfc617d5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 625f4a87bf679584a8f41fd5dfc617d5, type: 3}
 --- !u!1 &3632405819933098618 stripped
